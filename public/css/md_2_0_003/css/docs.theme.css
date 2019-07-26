@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* CSS Document */
+#game-menu .owl-carousel {
+margin: 1rem 0;
+}
+#game-menu .columns {
+/*	width: 100%;*/
+}
+#game-menu .owl-carousel .item {
+	margin-right: 0px;
+	height: 10rem;
+	background: #4DC7A0;
+	padding: 1rem;
+}
+#game-menu .owl-carousel .item.item-cq9{
+	background: url(../images/menubar-cq9.png) no-repeat 50% 14px;
+	background-size: 70px;
+}
+#game-menu .owl-carousel .item.item-818{
+	background: url(../images/menubar-818.png) no-repeat 50% 14px;
+	background-size: 70px;
+}
+#game-menu .owl-carousel .item.item-mg{
+	background: url(../images/index-game-logo.png) no-repeat -12px 0;
+}
+#game-menu .owl-carousel .item.item-pt {
+	background: url(../images/index-game-logo.png) no-repeat -122px 0;
+}
+#game-menu .owl-carousel .item.item-bbin {
+	background: url(../images/index-game-logo.png) no-repeat -238px 0;
+}
+#game-menu .owl-carousel .item.item-ag {
+	background: url(../images/index-game-logo.png) no-repeat -348px 0;
+}
+#game-menu .owl-carousel .item.item-qt {
+	background: url(../images/index-game-logo.png) no-repeat -455px 0;
+}
+#game-menu .owl-carousel .item.item-opus {
+	background: url(../images/index-game-logo.png) no-repeat -574px 0;
+}
+
+
+
+@media only screen{
+	#game-menu .columns {
+		position: relative;
+		padding-left: .9375rem;
+		padding-right: .9375rem;
+	}
+}
+@media only screen and (min-width: 40.0625em){
+	#game-menu .columns {
+		position: relative;
+		padding-left: .9375rem;
+		padding-right: .9375rem;
+	}
+}
+
+#game-menu .owl-theme .owl-nav {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin-top: 0px;
+}
+#game-menu .owl-carousel .owl-nav button.owl-next, #game-menu .owl-carousel .owl-nav button.owl-prev{
+	background: 0 0;
+	border: none;
+	padding: 0!important;
+}
+#game-menu .owl-carousel .owl-nav button.owl-prev{
+	position: absolute;
+	left: -20px;
+	
+}
+#game-menu .owl-carousel .owl-nav button.owl-next{
+	position: absolute;
+	right: -20px;
+}
+#game-menu .owl-theme .owl-nav [class*=owl-]{
+	color: #FFF;
+	font-size: 34px;
+	margin: 5px;
+	padding: 4px 7px;
+	background: #D6D6D6;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 3px;
+}

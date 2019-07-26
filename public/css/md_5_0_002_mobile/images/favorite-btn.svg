@@ -1,0 +1,45 @@
+<svg id="favorite-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        opacity: 0.7;
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.015" stop-color="#5976ba"/>
+      <stop offset="1" stop-color="#f19ec2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="gray"/>
+      <stop offset="1" stop-color="#333"/>
+    </linearGradient>
+  </defs>
+  <g id="组_45" data-name="组 45">
+    <path id="路径_30" data-name="路径 30" class="cls-1" d="M35.25,40.25H5.75a5,5,0,0,1-5-5V5.75a5,5,0,0,1,5-5h29.5a5,5,0,0,1,5,5v29.5A5,5,0,0,1,35.25,40.25Z" transform="translate(-0.5 -0.5)"/>
+    <path id="路径_31" data-name="路径 31" class="cls-2" d="M40.25,8.993V8.157A7.407,7.407,0,0,0,32.843.75H8.157A7.407,7.407,0,0,0,.75,8.157v22A66.445,66.445,0,0,1,40.25,8.993Z" transform="translate(-0.5 -0.5)"/>
+    <g id="组_44" data-name="组 44">
+      <path id="路径_32" data-name="路径 32" class="cls-3" d="M35,1.333A3.669,3.669,0,0,1,38.667,5V35A3.669,3.669,0,0,1,35,38.667H5A3.669,3.669,0,0,1,1.333,35V5A3.669,3.669,0,0,1,5,1.333H35M35,0H5A5,5,0,0,0,0,5V35a5,5,0,0,0,5,5H35a5,5,0,0,0,5-5V5a5,5,0,0,0-5-5Z"/>
+    </g>
+  </g>
+  <g id="组_46" data-name="组 46" transform="translate(5 4.5)">
+    <path id="路径_33" data-name="路径 33" class="cls-4" d="M45,73.5A10.512,10.512,0,0,0,34.5,63h-9A10.512,10.512,0,0,0,15,73.5v3H45Zm-27,0A7.507,7.507,0,0,1,25.5,66h9A7.507,7.507,0,0,1,42,73.5Z" transform="translate(-15 -46.5)"/>
+    <path id="路径_34" data-name="路径 34" class="cls-4" d="M52.5,21A7.5,7.5,0,1,0,45,28.5,7.507,7.507,0,0,0,52.5,21Zm-12,0A4.5,4.5,0,1,1,45,25.5,4.507,4.507,0,0,1,40.5,21Z" transform="translate(-30 -13.5)"/>
+  </g>
+</svg>

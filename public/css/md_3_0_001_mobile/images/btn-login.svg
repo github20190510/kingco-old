@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="30" viewBox="0 0 60 30">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.156" y1="-0.189" x2="0.844" y2="1.189" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e9aa5b"/>
+      <stop offset="0.33" stop-color="#f9f4b8"/>
+      <stop offset="0.66" stop-color="#e9aa5b"/>
+      <stop offset="1" stop-color="#946134"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.844" y1="1.256" x2="0.156" y2="-0.256" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="btn-login" transform="translate(-5 -5)">
+    <g id="组_82" data-name="组 82" transform="translate(5 5)">
+      <g id="组_81" data-name="组 81">
+        <rect id="矩形_529" data-name="矩形 529" width="60" height="30" rx="6" fill="url(#linear-gradient)"/>
+        <rect id="矩形_530" data-name="矩形 530" width="55" height="25" rx="4" transform="translate(2.5 2.5)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg id="btn-login" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#989898"/>
+      <stop offset="1" stop-color="#333"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="gray"/>
+      <stop offset="1" stop-color="#333"/>
+    </linearGradient>
+  </defs>
+  <path id="路径_28" data-name="路径 28" class="cls-1" d="M54.375,30H5.625A5.627,5.627,0,0,1,0,24.375V5.625A5.627,5.627,0,0,1,5.625,0h48.75A5.627,5.627,0,0,1,60,5.625v18.75A5.627,5.627,0,0,1,54.375,30Z"/>
+  <g id="组_41" data-name="组 41">
+    <path id="路径_29" data-name="路径 29" class="cls-2" d="M54.375,1.5A4.127,4.127,0,0,1,58.5,5.625v18.75A4.127,4.127,0,0,1,54.375,28.5H5.625A4.127,4.127,0,0,1,1.5,24.375V5.625A4.127,4.127,0,0,1,5.625,1.5h48.75m0-1.5H5.625A5.627,5.627,0,0,0,0,5.625v18.75A5.627,5.627,0,0,0,5.625,30h48.75A5.627,5.627,0,0,0,60,24.375V5.625A5.627,5.627,0,0,0,54.375,0Z"/>
+  </g>
+</svg>

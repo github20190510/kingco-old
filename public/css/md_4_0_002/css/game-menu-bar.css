@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*menu-bar*/
+/*..................... index Slot ..................... */
+.game-module-tab2{
+	text-align: center;
+}
+.game-module-tab2 .content .menu-bar {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	max-width: 941px;
+	min-height: 97px;
+
+}
+.game-module-tab2 .content .menu-bar li {
+	position: relative;
+	display: inline-block;
+	margin-right: -5px;
+	height: 97px;
+	/*	width: 122px;*/
+	-webkit-transition: all .3s;
+	transition: all .4s;
+	background: url(../images/index-menubar-out.svg) no-repeat 0 0;
+	background-size: 112px 97px;
+}
+.game-module-tab2 .content .menu-bar li.active,.game-module-tab2 .content .menu-bar li:hover {
+	height: 97px;
+	background: url(../images/index-menubar-up.svg) no-repeat 0 0;
+	background-size: 112px 97px;
+}
+.game-module-tab2 .content .menu-bar li.ag, .game-module-tab2 .content .menu-bar li.mg, .game-module-tab2 .content .menu-bar li.cq9, .game-module-tab2 .content .menu-bar li {
+	width: 112px;
+	color: #fff;
+}
+.game-module-tab2 .content .menu-bar li span {
+	display: block;
+	width: 100%;
+	height: 97px;
+}
+.game-module-tab2 .content .menu-bar li.cq9 span {
+	background: url(../images/menubar-cq9.png) no-repeat 50% 14px;
+	background-size: 70px;
+}
+.game-module-tab2 .content .menu-bar li.lt818 span {
+	background: url(../images/menubar-818.png) no-repeat 50% 13px;
+	background-size: 88px;
+}
+.game-module-tab2 .content .menu-bar li.mg span {
+	background: url(../images/index-game-logo.png) no-repeat -12px 0;
+}
+.game-module-tab2 .content .menu-bar li.pt span {
+	background: url(../images/index-game-logo.png) no-repeat -122px 0;
+}
+.game-module-tab2 .content .menu-bar li.bbin span {
+	background: url(../images/index-game-logo.png) no-repeat -238px 0;
+}
+.game-module-tab2 .content .menu-bar li.ag span {
+	background: url(../images/index-game-logo.png) no-repeat -348px 0;
+}
+.game-module-tab2 .content .menu-bar li.qt span {
+	background: url(../images/index-game-logo.png) no-repeat -455px 0;
+}
+.game-module-tab2 .content .menu-bar li.opus span {
+	background: url(../images/index-game-logo.png) no-repeat -574px 0;
+}
