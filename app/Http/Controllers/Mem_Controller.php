@@ -44,9 +44,10 @@ class Mem_Controller extends Controller
             App::setLocale($lang);
         }
 
-        //傳入的lang是做為載入不同css的依據
-        return view($view_data['view_url'], array('key'=>$act, 'header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'mb_info_head'=>$view_data['mb_info_head'], 'mb_head_name'=>$view_data['mb_head_name'], 'mb_info_left'=>$view_data['mb_info_left'], 'lang'=>$lang));
+        $sharePrefix = Basic_md::get_share_css_prefix();
 
+        //傳入的lang是做為載入不同css的依據
+        return view($view_data['view_url'], array('key'=>$act, 'header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'mb_info_head'=>$view_data['mb_info_head'], 'mb_head_name'=>$view_data['mb_head_name'], 'mb_info_left'=>$view_data['mb_info_left'], 'lang'=>$lang, 'sharePrefix' => $sharePrefix));
     }
     /**
     * 進入登入頁(帶參數)
@@ -71,9 +72,11 @@ class Mem_Controller extends Controller
             //如果語系不相同要設定當下語系
             App::setLocale($lang);
         }
-        
+
+        $sharePrefix = Basic_md::get_share_css_prefix();
+
         //傳入的lang是做為載入不同css的依據
-        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'gid'=>$gid, 'gtype'=>$gtype, 'lang'=>$lang));
+        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'gid'=>$gid, 'gtype'=>$gtype, 'lang'=>$lang, 'sharePrefix' => $sharePrefix));
 
     }
     /**

@@ -42,8 +42,10 @@ class Game_Controller extends Controller
             App::setLocale($lang);
         }
 
+        $sharePrefix = Basic_md::get_share_css_prefix();
+
         //傳入的lang是做為載入不同css的依據
-        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'game_list'=>$view_data['game_list'], 'lang'=>$lang));
+        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'game_list'=>$view_data['game_list'], 'lang'=>$lang, 'sharePrefix' => $sharePrefix));
 
     }
     /**
@@ -68,9 +70,11 @@ class Game_Controller extends Controller
             //如果語系不相同要設定當下語系
             App::setLocale($lang);
         }
+
+        $sharePrefix = Basic_md::get_share_css_prefix();
         
         //傳入的lang是做為載入不同css的依據
-        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'eid'=>session('login_eid'), 'gid'=>$gid, 'gtype'=>$gtype, 'lang'=>$lang));
+        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'eid'=>session('login_eid'), 'gid'=>$gid, 'gtype'=>$gtype, 'lang'=>$lang, 'sharePrefix' => $sharePrefix));
 
     }
     /**

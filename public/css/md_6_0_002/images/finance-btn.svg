@@ -1,0 +1,46 @@
+<svg id="finance-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        opacity: 0.7;
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.015" stop-color="#5976ba"/>
+      <stop offset="1" stop-color="#f19ec2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="gray"/>
+      <stop offset="1" stop-color="#333"/>
+    </linearGradient>
+  </defs>
+  <g id="组_55" data-name="组 55">
+    <path id="路径_43" data-name="路径 43" class="cls-1" d="M35.25,40.25H5.75a5,5,0,0,1-5-5V5.75a5,5,0,0,1,5-5h29.5a5,5,0,0,1,5,5v29.5A5,5,0,0,1,35.25,40.25Z" transform="translate(-0.5 -0.5)"/>
+    <path id="路径_44" data-name="路径 44" class="cls-2" d="M40.25,8.993V8.157A7.407,7.407,0,0,0,32.843.75H8.157A7.407,7.407,0,0,0,.75,8.157v22A66.445,66.445,0,0,1,40.25,8.993Z" transform="translate(-0.5 -0.5)"/>
+    <g id="组_54" data-name="组 54">
+      <path id="路径_45" data-name="路径 45" class="cls-3" d="M35,1.333A3.669,3.669,0,0,1,38.667,5V35A3.669,3.669,0,0,1,35,38.667H5A3.669,3.669,0,0,1,1.333,35V5A3.669,3.669,0,0,1,5,1.333H35M35,0H5A5,5,0,0,0,0,5V35a5,5,0,0,0,5,5H35a5,5,0,0,0,5-5V5a5,5,0,0,0-5-5Z"/>
+    </g>
+  </g>
+  <g id="组_56" data-name="组 56" transform="translate(5 5)">
+    <path id="路径_46" data-name="路径 46" class="cls-4" d="M48.81,41.25H51.3A1.247,1.247,0,0,1,52.54,42.5h2.487a3.745,3.745,0,0,0-3.73-3.75V37.5H48.81v1.25a3.75,3.75,0,0,0,0,7.5H51.3a1.25,1.25,0,0,1,0,2.5H48.81a1.247,1.247,0,0,1-1.243-1.25H45.08a3.745,3.745,0,0,0,3.73,3.75V52.5H51.3V51.25a3.75,3.75,0,0,0,0-7.5H48.81a1.25,1.25,0,0,1,0-2.5Z" transform="translate(-35.053 -30)"/>
+    <path id="路径_47" data-name="路径 47" class="cls-4" d="M29.923,17.5a12.328,12.328,0,0,1,10.46,5.767l-3,2.983H44.92v-7.5l-2.727,2.713A14.781,14.781,0,0,0,29.923,15,14.979,14.979,0,0,0,15,30h2.487A12.483,12.483,0,0,1,29.923,17.5Z" transform="translate(-15 -15)"/>
+    <path id="路径_48" data-name="路径 48" class="cls-4" d="M30.23,72.5a12.328,12.328,0,0,1-10.46-5.767l3-2.983H15.23v7.5l2.727-2.713A14.792,14.792,0,0,0,30.23,75,14.979,14.979,0,0,0,45.153,60H42.667A12.483,12.483,0,0,1,30.23,72.5Z" transform="translate(-15.153 -45)"/>
+  </g>
+</svg>

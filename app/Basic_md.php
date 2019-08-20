@@ -260,7 +260,7 @@ class Basic_md extends Model
                     $page_name .= 'mb_message';
                 break;
                 case 'notic':
-                   if(strpos(session('model_type'), '_mobile') !== false){
+                   if(strpos(session('model_type'), '_mobile') !== false || Basic_md::is_new_model_type()){
                         $page_name .= 'mb_notic';
                     }else{
                         header('Location:'.'/mb/mb_message');
@@ -271,7 +271,7 @@ class Basic_md extends Model
                     $page_name .= 'mb_bank_card';
                 break;
                 case 'bank_card_add':
-                    if(strpos(session('model_type'), '_mobile') !== false){
+                    if(strpos(session('model_type'), '_mobile') !== false || Basic_md::is_new_model_type()){
                         $page_name .= 'mb_bank_card_add';
                     }else{
                         header('Location:'.'/mb/mb_bank_card');
@@ -294,7 +294,7 @@ class Basic_md extends Model
                     $page_name .= 'login_page';
                 break;
                 case 'mb_index':
-                    if(strpos(session('model_type'), '_mobile') !== false){
+                    if(strpos(session('model_type'), '_mobile') !== false || Basic_md::is_new_model_type()){
                         $page_name .= 'mb_index';
                     }else{
                         header('Location:'.'/mb/mb_acc');
@@ -303,7 +303,7 @@ class Basic_md extends Model
                     
                 break;
                 case 'deposit_list':
-                    if(strpos(session('model_type'), '_mobile') !== false){
+                    if(strpos(session('model_type'), '_mobile') !== false || Basic_md::is_new_model_type()){
                         $page_name .= 'mb_deposit_list';
                     }else{
                         header('Location:'.'/mb/mb_details');
@@ -311,7 +311,7 @@ class Basic_md extends Model
                     }
                 break;
                 case 'withdraw_list':
-                    if(strpos(session('model_type'), '_mobile') !== false){
+                    if(strpos(session('model_type'), '_mobile') !== false || Basic_md::is_new_model_type()){
                         $page_name .= 'mb_withdraw_list';
                     }else{
                         header('Location:'.'/mb/mb_details');
@@ -507,21 +507,35 @@ class Basic_md extends Model
     **/
     private static function combine_page_array($page_name, $page_type = ''){
 
-    	$rtn_array['view_url'] = session('model_type') . '/' . $page_name;
-        $rtn_array['header_name'] = session('model_type').'/include/header';
-        $rtn_array['head_name'] = session('model_type').'/include/head';
-        $rtn_array['mb_head_name'] = session('model_type').'/include/mb_head';
-        $rtn_array['footer_name'] = session('model_type').'/include/footer';
-        $rtn_array['game_list'] = session('model_type').'/include/gamelist';
+        // kingco版型才會進去if
+        if(Basic_md::is_new_model_type()) {
+            $prefix = 'md_5_0_002_mobile/';
+            $rtn_array['view_url'] = $prefix. $page_name;
+            $rtn_array['header_name'] = $prefix.'include/header';
+            $rtn_array['head_name'] = $prefix.'include/head';
+            $rtn_array['mb_head_name'] = $prefix.'include/mb_head';
+            $rtn_array['footer_name'] = $prefix.'include/footer';
+            $rtn_array['game_list'] = $prefix.'include/gamelist';
+
+            if ($page_type == 'mb') {
+                $rtn_array['mb_info_head'] = $prefix.'mb/mb_info_head';
+                $rtn_array['mb_info_left'] = $prefix.'mb/mb_info_left';
+            }
+        } else {
+            $rtn_array['view_url'] = session('model_type') . '/' . $page_name;
+            $rtn_array['header_name'] = session('model_type') . '/include/header';
+            $rtn_array['head_name'] = session('model_type') . '/include/head';
+            $rtn_array['mb_head_name'] = session('model_type') . '/include/mb_head';
+            $rtn_array['footer_name'] = session('model_type') . '/include/footer';
+            $rtn_array['game_list'] = session('model_type') . '/include/gamelist';
 
 
-        if($page_type == 'mb'){
-            $rtn_array['mb_info_head'] = session('model_type').'/mb/mb_info_head';
-            $rtn_array['mb_info_left'] = session('model_type').'/mb/mb_info_left';
+            if ($page_type == 'mb') {
+                $rtn_array['mb_info_head'] = session('model_type') . '/mb/mb_info_head';
+                $rtn_array['mb_info_left'] = session('model_type') . '/mb/mb_info_left';
+            }
         }
-
     	return $rtn_array;
-
     }
     /**
     * 呼叫會員token相關的sp
@@ -570,4 +584,19 @@ class Basic_md extends Model
 
     }
 
+    // kingco md_6_0_002 新版型手機版和PC版共用CSS路徑
+    public static function get_share_css_prefix()
+    {
+        return (session('model_type') === 'md_6_0_002_mobile') ? 'md_6_0_002' : session('model_type');
+    }
+
+    // kingco md_6_0_002 新版型判斷 因為有的頁面原本寫法非md_5_002_mobile版型都會導向到其他頁面故新增此方法
+    private static function is_new_model_type()
+    {
+        return (in_array(session('model_type'), array(
+            'md_5_0_002_mobile',
+            'md_6_0_002',
+            'md_6_0_002_mobile',
+        ))) ? true : false;
+    }
 }

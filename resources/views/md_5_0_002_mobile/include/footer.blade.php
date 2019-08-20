@@ -1,94 +1,98 @@
-<footer class="footer" id="footer" v-if="bln_index == 1">
-    <div class="modal fade mem-modal" id="show_message" tabindex="-1" role="dialog" aria-labelledby="#login_btn" aria-hidden="false" style="position:absolute;left:30%;">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-white brown">
-                    <h5 class="modal-title" id="show_message_title">{{ __('msg_zy_1.my_info') }}</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" id="show_message_close"> <span aria-hidden="true">×</span> </button>
-                </div>
-                <div class="modal-body" style="width:100%">
-                    <div class="container-fluid">
-                        <div class="row" v-for="(message,index) in message_datas">
-                            <div class="col-md-12" style="border-bottom:1px dashed black;">@{{ message.text.content }}</div>
+@switch(session('model_type'))
+    @case('md_6_0_002_mobile')
+        <footer id="footer" v-if="bln_index == 1">
+            <div class="modal fade mem-modal" id="show_message" tabindex="-1" role="dialog" aria-labelledby="#login_btn" aria-hidden="false" style="position:absolute;left:30%;">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-white brown">
+                            <h5 class="modal-title" id="show_message_title">{{ __('msg_zy_1.my_info') }}</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" id="show_message_close"> <span aria-hidden="true">×</span> </button>
+                        </div>
+                        <div class="modal-body" style="width:100%">
+                            <div class="container-fluid">
+                                <div class="row" v-for="(message,index) in message_datas">
+                                    <div class="col-md-12" style="border-bottom:1px dashed black;">@{{ message.text.content }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button v-if="message_count != 0" type="button" class="btn btn-lh m-auto"  @click="into_message">{{ __('msg_zy_1.check_message') }}</button>
+                            <button v-if="url == ''" type="button" class="btn btn-lh m-auto"  data-dismiss="modal">{{ __('msg_zy_1.ok') }}</button>
+                            <button v-else type="button" class="btn btn-lh m-auto"  data-dismiss="modal" @click="into_spcific_page(login_bar.url)">{{ __('msg_zy_1.ok') }}</button>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button v-if="message_count != 0" type="button" class="btn btn-lh m-auto"  @click="into_message">{{ __('msg_zy_1.check_message') }}</button>
-                    <button v-if="url == ''" type="button" class="btn btn-lh m-auto"  data-dismiss="modal">{{ __('msg_zy_1.ok') }}</button>
-                    <button v-else type="button" class="btn btn-lh m-auto"  data-dismiss="modal" @click="into_spcific_page(login_bar.url)">{{ __('msg_zy_1.ok') }}</button>
-                </div>
             </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 footer-help">
-                <div class="m-auto">
-                    <div class="title"><!--幫助中心--></div>
-                    <div class="foot-nav">
-                        <ul class="list-unstyled ">
-                            <li>{{ __('msg_zy_1.about_us') }}</li>
-                            <!--<li>存款帮助</li>
-                            <li>取款帮助</li>-->
-                            <li>{{ __('msg_zy_1.QandA') }}</li>
-                            <li>{{ __('msg_zy_1.responsibility_bitting') }}</li>
-                            <li>{{ __('msg_zy_1.dis_and_rule') }}</li>
-                            <li>{{ __('msg_zy_1.privacy') }}</li>
-                        </ul>
+            <nav class="btn-group d-flex fixed-bottom align-items-end footer-menu" role="group">
+                <button type="button" class="btn bg-transparent d-flex flex-column align-items-center p-0 w-100" role="button" onclick="location.href='/'"><span class="f-icon home-btn"></span><span>{{ __('msg_dt_1.home') }}</span></button>
+                <div class="btn-group w-100 finance-drop m-0 p-0" role="group" id="divfooter">
+                    <button type="button" class="btn btn-sm bg-transparent d-flex flex-column align-items-center p-0 dropdown-toggle w-100 f-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="f-icon finance-btn"></span><span>{{ __('msg_dt_1.money_center') }}</span>
+                    </button>
+                    <div class="dropdown-menu c-alpha-black border-0">
+                        <div class="d-flex m-0">
+                            <a class="text-white w-100 d-flex flex-column align-items-center" href="/mb/details"><i class="fas fa-chart-line fa-2x"></i>{{ __('msg_dt_1.money_record') }}</a>
+                            <a class="text-white w-100 f-btn d-flex flex-column align-items-center" href="/mb/showrecord"><i class="fas fa-gamepad fa-2x"></i>{{ __('msg_dt_1.betting').__('msg_dt_1.record') }}</a>
+                            <a class="text-white w-100 f-btn d-flex flex-column align-items-center" href="/mb/deposit"><i class="fas fa-piggy-bank fa-2x"></i>{{ __('msg_dt_1.saving_money') }}</a>
+                            <a class="text-white w-100 f-btn d-flex flex-column align-items-center" href="/mb/withdraw"><i class="fas fa-hand-holding-usd fa-2x"></i><spen>{{ __('msg_dt_1.geting_money') }}</spen></a>
+                        </div>
                     </div>
                 </div>
-                
-            </div>
-            <div class="col-md-2 footer-contact">
-                <div class="">
-                    <div class="title"><!--聯繫我們--></div>
-                    <div class="foot-nav">
-                        <ul class="list-unstyled ">
-                            <li>{{ __('msg_zy_1.online_service') }}</li>
-                            <li>{{ __('msg_zy_1.electronic').__('msg_zy_1.email') }}</li>
-                        </ul>
+                <button type="button" class="btn btn-sm bg-transparent d-flex flex-column align-items-center p-0 w-100 f-btn" role="button" onclick="location.href='/discount'"><span class="f-icon discount-btn"></span><span>{{ __('msg_dt_1.promotion') }}</span></button>
+                <button type="button" class="btn btn-sm bg-transparent d-flex flex-column align-items-center p-0 w-100 f-btn" role="button" onclick="location.href='/mb/mb_index'"><span class="f-icon account-btn"></span><span>{{ __('msg_dt_1.member_center') }}</span></button>
+                <button type="button" class="btn btn-sm bg-transparent d-flex flex-column align-items-center p-0 w-100 f-btn" role="button" onclick="window.open('https://ic86.ichatshop.com/chat/Hotline/channel.jsp?cid=5010400&cnfid=3603&j=1699111339&s=1'); return false;"><span class="f-icon service-btn"></span><span>{{ __('msg_dt_1.online_service') }}</span></button>
+            </nav>
+        </footer>
+        @break
+    @case('md_6_0_002')
+    @default
+        <footer class="footer" id="footer" v-if="bln_index == 1">
+            <div class="modal fade mem-modal" id="show_message" tabindex="-1" role="dialog" aria-labelledby="#login_btn" aria-hidden="false" style="position:absolute;left:30%;">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-white brown">
+                            <h5 class="modal-title" id="show_message_title">{{ __('msg_zy_1.my_info') }}</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" id="show_message_close"> <span aria-hidden="true">×</span> </button>
+                        </div>
+                        <div class="modal-body" style="width:100%">
+                            <div class="container-fluid">
+                                <div class="row" v-for="(message,index) in message_datas">
+                                    <div class="col-md-12" style="border-bottom:1px dashed black;">@{{ message.text.content }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button v-if="message_count != 0" type="button" class="btn btn-lh m-auto"  @click="into_message">{{ __('msg_zy_1.check_message') }}</button>
+                            <button v-if="url == ''" type="button" class="btn btn-lh m-auto"  data-dismiss="modal">{{ __('msg_zy_1.ok') }}</button>
+                            <button v-else type="button" class="btn btn-lh m-auto"  data-dismiss="modal" @click="into_spcific_page(login_bar.url)">{{ __('msg_zy_1.ok') }}</button>
+                        </div>
                     </div>
                 </div>
-                
-                
             </div>
-            <div class="col-md-2 footer-agency">
-                <div class="text-left">
-                    <div class="title"><!--代理商申請--></div>
-                    <div class="foot-nav">
-                        <ul class="list-unstyled ">
-                            <li>{{ __('msg_zy_1.agent_way') }}</li>
-                        </ul>
+            <div class="container">
+                @include('md_5_0_002_mobile.include._help')
+                <div class="row game-logo-bar">
+                    <div class="col text-center">
+                        <span class="game-logo logo-bg"></span>
+                        <span class="game-logo logo-bbin"></span>
+                        <span class="game-logo logo-ag"></span>
+                        <span class="game-logo logo-cg"></span>
+                        <span class="game-logo logo-gd"></span>
+                        <span class="game-logo logo-mg"></span>
+                        <span class="game-logo logo-pt"></span>
+                        <span class="game-logo logo-ab"></span>
+                        <span class="game-logo logo-sb"></span>
+                        <span class="game-logo logo-dg"></span>
                     </div>
                 </div>
-                
-            
             </div>
-        </div>
-        
-        <div class="row game-logo-bar">
-            <div class="col">
-                <span class="game-logo logo-bg"></span>
-                <span class="game-logo logo-bbin"></span>
-                <span class="game-logo logo-ag"></span>
-                <span class="game-logo logo-cg"></span>
-                <span class="game-logo logo-gd"></span>
-                <span class="game-logo logo-mg"></span>
-                <span class="game-logo logo-pt"></span>
-                <span class="game-logo logo-ab"></span>
-                <span class="game-logo logo-sb"></span>
-                <span class="game-logo logo-dg"></span>
+            <div class="row">
+                <div class="col copyright">
+                    <div class="">{{ __('msg_zy_1.copyright') }}</div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col copyright">
-            <div class="">{{ __('msg_zy_1.copyright') }}</div>
-        </div>
-    </div>
-</footer>
-
+        </footer>
+@endswitch
 <script>
     var padDate = function(value){
 

@@ -12,10 +12,6 @@ const game_list_key = 'kc';
 const CancelToken = axios.CancelToken;
 const source = CancelToken.source();
 /*
-* 定義文件位置
-*/
-const Folder_Name = 'md_5_0_002_mobile';
-/*
 * 輪播套件初始化
 */
 $(document).ready(function(){

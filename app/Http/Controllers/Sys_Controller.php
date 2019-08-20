@@ -63,8 +63,10 @@ class Sys_Controller extends Controller
             App::setLocale($lang);
         }
 
+        $sharePrefix = Basic_md::get_share_css_prefix();
+
         //傳入的lang是做為載入不同css的依據
-        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'mb_head_name'=>$view_data['mb_head_name'], 'footer_name'=>$view_data['footer_name'], 'lang'=>$lang, 'params'=>$params));
+        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'mb_head_name'=>$view_data['mb_head_name'], 'footer_name'=>$view_data['footer_name'], 'lang'=>$lang, 'params'=>$params, 'sharePrefix' => $sharePrefix));
 
     }
     /**
@@ -316,8 +318,10 @@ class Sys_Controller extends Controller
             App::setLocale($lang);
         }
 
+        $sharePrefix = Basic_md::get_share_css_prefix();
+
         //傳入的lang是做為載入不同css的依據
-        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'eid'=>session('login_eid'), 'amount'=>$amount, 'thirdpartycode'=>$thirdparty_code, 'paymenttypebankcode'=>$payment_bank_code, 'bankcode'=>$bank_code, 'lang'=>$lang));
+        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'eid'=>session('login_eid'), 'amount'=>$amount, 'thirdpartycode'=>$thirdparty_code, 'paymenttypebankcode'=>$payment_bank_code, 'bankcode'=>$bank_code, 'lang'=>$lang, 'sharePrefix' => $sharePrefix));
 
     }
     /**
@@ -345,8 +349,10 @@ class Sys_Controller extends Controller
             App::setLocale($lang);
         }
 
+        $sharePrefix = Basic_md::get_share_css_prefix();
+
         //傳入的lang是做為載入不同css的依據
-        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'eid'=>session('login_eid'), 'amount'=>$amount, 'ent_code'=>$enterprise_information_code, 'lang'=>$lang));
+        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'eid'=>session('login_eid'), 'amount'=>$amount, 'ent_code'=>$enterprise_information_code, 'lang'=>$lang, 'sharePrefix' => $sharePrefix));
 
     }
     /**
@@ -374,8 +380,10 @@ class Sys_Controller extends Controller
             App::setLocale($lang);
         }
 
+        $sharePrefix = Basic_md::get_share_css_prefix();
+
         //傳入的lang是做為載入不同css的依據
-        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'eid'=>session('login_eid'), 'amount'=>$amount, 'qrtype'=>$qrtype, 'offline_account'=>$offline_account, 'lang'=>$lang));
+        return view($view_data['view_url'], array('header_name'=>$view_data['header_name'], 'head_name'=>$view_data['head_name'], 'footer_name'=>$view_data['footer_name'], 'eid'=>session('login_eid'), 'amount'=>$amount, 'qrtype'=>$qrtype, 'offline_account'=>$offline_account, 'lang'=>$lang , 'sharePrefix' => $sharePrefix));
 
     }
     /**
