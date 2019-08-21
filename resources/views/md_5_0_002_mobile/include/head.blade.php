@@ -7,7 +7,7 @@
 				<div class="form-inline float-left ml-2 p-3">
 					<span id="time">{{ __('msg_zy_1.Beijing') . __('msg_zy_1.time') }} : @{{ date | formatDate }}</span>
 				</div>
-				<div class="form-inline float-left ml-5 p-3 " v-if="login_status === 1">
+				<div class="form-inline float-left p-3 " v-if="login_status === 1" style="margin-left: 300px;">
 					<span class="username"><i class="fas fa-user fa-fw"></i> @{{login_acc}}</span>
 					<span class="credit" id="acc_money"><i class="fas fa-wallet fa-fw"></i> {{ __('msg_zy_1.balance') }} 0.00</span>
 				</div>

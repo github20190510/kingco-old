@@ -487,5 +487,7 @@
         　　} 
         });
 
+        $('#divfooter > .f-btn').click();
+
     });
 </script>

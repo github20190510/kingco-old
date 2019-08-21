@@ -92,7 +92,7 @@ nav.nav-header{
 	height: 96px;
 	/*	padding: 5px 15px;*/
 	box-shadow: 2px 0px 4px rgba(0,0,0,0.3);
-	background: url(../images/navbar-bg.png) no-repeat;
+	/*background: url(../images/navbar-bg.png) no-repeat;*/
 	background-size: cover;
 }
 nav .lh-logo{
@@ -707,10 +707,15 @@ nav.footer-menu .finance-drop .dropdown-menu{
 
 
 @media (min-width: 360px) {
-.index-main.main {
-	padding: 13px 0px 25px;
+	.index-main.main {
+		padding: 13px 0px 25px;
+	}
 }
-
+@media (min-width: 1200px) {
+	.index-main.main {
+		padding: 90px 25px 25px;
+	}
+}
 
 /* ========================== game icon ========================== */
 
